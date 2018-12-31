@@ -1,9 +1,10 @@
 //: arrays/ComparatorTest.java
 package arrays; /* Added by Eclipse.py */
 // Implementing a Comparator for a class.
+import net.mindview.util.Generated;
+
 import java.util.*;
-import net.mindview.util.*;
-import static net.mindview.util.Print.*;
+
 
 class CompTypeComparator implements Comparator<CompType> {
   public int compare(CompType o1, CompType o2) {
@@ -15,11 +16,11 @@ public class ComparatorTest {
   public static void main(String[] args) {
     CompType[] a = Generated.array(
       new CompType[12], CompType.generator());
-    print("before sorting:");
-    print(Arrays.toString(a));
+    System.out.println("before sorting:");
+    System.out.println(Arrays.toString(a));
     Arrays.sort(a, new CompTypeComparator());
-    print("after sorting:");
-    print(Arrays.toString(a));
+    System.out.println("after sorting:");
+    System.out.println(Arrays.toString(a));
   }
 } /* Output:
 before sorting:

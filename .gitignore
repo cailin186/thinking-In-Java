@@ -4,6 +4,7 @@ out
 *.iml
 .project
 .classpath
+*.class
 .settings
 */target
 */.settings

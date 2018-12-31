@@ -2,7 +2,6 @@
 package arrays; /* Added by Eclipse.py */
 // Searching with a Comparator.
 import java.util.*;
-import net.mindview.util.*;
 
 public class AlphabeticSearch {
   public static void main(String[] args) {
@@ -13,6 +12,13 @@ public class AlphabeticSearch {
     int index = Arrays.binarySearch(sa, sa[10],
       String.CASE_INSENSITIVE_ORDER);
     System.out.println("Index: "+ index + "\n"+ sa[index]);
+//    System.out.println("Index: "+ index + "\n"+ sa[index]);
+//
+//    System.out.println("Index: "+ index + "\n"+ sa[index]);
+//    System.out.println("Index: "+ index + "\n"+ sa[index]);
+//    System.out.println("Index: "+ index + "\n"+ sa[index]);
+//    System.out.println("Index: "+ index + "\n"+ sa[index]);
+//    System.out.println("Index: "+ index + "
   }
 } /* Output:
 [bkIna, cQrGs, cXZJo, dLsmw, eGZMm, EqUCB, gwsqP, hKcxr, HLGEa, HqXum, HxxHv, JMRoE, JmzMs, Mesbt, MNvqe, nyGcF, ogoYW, OneOE, OWZnT, RFJQA, rUkZP, sgqia, slJrL, suEcU, uTpnX, vpfFv, WHkjU, xxEAJ, YNzbr, zDyCy]
