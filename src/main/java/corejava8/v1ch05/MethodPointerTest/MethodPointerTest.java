@@ -1,3 +1,5 @@
+package corejava8.v1ch05.MethodPointerTest;
+
 import java.lang.reflect.*;
 
 /**

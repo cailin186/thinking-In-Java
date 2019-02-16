@@ -9,7 +9,16 @@ public class SimpleCollection {
       c.add(i); // Autoboxing
     for(Integer i : c)
       System.out.print(i + ", ");
+  
+    Iterator it = c.iterator();
+    while(it.hasNext())
+      System.out.println(it.next());
+  
   }
+  
+  
+  
+  
 } /* Output:
 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
 *///:~

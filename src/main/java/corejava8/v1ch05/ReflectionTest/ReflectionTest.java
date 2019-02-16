@@ -1,3 +1,5 @@
+package corejava8.v1ch05.ReflectionTest;
+
 import java.util.*;
 import java.lang.reflect.*;
 
@@ -26,6 +28,7 @@ public class ReflectionTest
          Class cl = Class.forName(name);
          Class supercl = cl.getSuperclass();
          String modifiers = Modifier.toString(cl.getModifiers());
+         System.out.println("cailin----"+modifiers);
          if (modifiers.length() > 0) System.out.print(modifiers + " ");
          System.out.print("class " + name);
          if (supercl != null && supercl != Object.class) System.out.print(" extends "
@@ -118,7 +121,7 @@ public class ReflectionTest
          System.out.print("   ");
          String modifiers = Modifier.toString(f.getModifiers());
          if (modifiers.length() > 0) System.out.print(modifiers + " ");         
-         System.out.println(type.getName() + " " + name + ";");
+         System.out.println(type.getName() + " " + name + " "+type+"cailin;");
       }
    }
 }

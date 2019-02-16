@@ -1,3 +1,5 @@
+package corejava8.v1ch06.InnerClassTest;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;

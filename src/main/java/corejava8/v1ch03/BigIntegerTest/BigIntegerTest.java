@@ -1,36 +1,55 @@
 package corejava8.v1ch03.BigIntegerTest;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.math.*;
 import java.util.*;
 
 /**
- * This program uses big numbers to compute the odds of winning the grand prize in a lottery.
+ * This program uses big numbers to compute the odds of winning the grand prize
+ * in a lottery.
+ * 
  * @version 1.20 2004-02-10
  * @author Cay Horstmann
  */
-public class BigIntegerTest
-{
-   public static void main(String[] args)
-   {
-      Scanner in = new Scanner(System.in);
-     
+public class BigIntegerTest {
+	public static void main(String[] args) {
+//		testScanner();
+		scannerIOTest();
+	}
 
-      System.out.print("How many numbers do you need to draw? ");
-      int k = in.nextInt();
+	private static void testScanner() {
+		Scanner in = new Scanner(System.in);
 
-      System.out.print("What is the highest number you can draw? ");
-      int n = in.nextInt();
+		System.out.print("How many numbers do you need to draw? ");
+		int k = in.nextInt();
 
-      /*
-       * compute binomial coefficient n*(n-1)*(n-2)*...*(n-k+1)/(1*2*3*...*k)
-       */
+		System.out.print("What is the highest number you can draw? ");
+		int n = in.nextInt();
 
-      BigInteger lotteryOdds = BigInteger.valueOf(1);
+		/*
+		 * compute binomial coefficient n*(n-1)*(n-2)*...*(n-k+1)/(1*2*3*...*k)
+		 */
 
-      for (int i = 1; i <= k; i++)
-         lotteryOdds = lotteryOdds.multiply(BigInteger.valueOf(n - i + 1)).divide(
-               BigInteger.valueOf(i));
+		BigInteger lotteryOdds = BigInteger.valueOf(1);
 
-      System.out.println("Your odds are 1 in " + lotteryOdds + ". Good luck!");
-   }
+		for (int i = 1; i <= k; i++)
+			lotteryOdds = lotteryOdds.multiply(BigInteger.valueOf(n - i + 1)).divide(BigInteger.valueOf(i));
+
+		System.out.println("Your odds are 1 in " + lotteryOdds + ". Good luck!");
+	}
+
+	public static void scannerIOTest() {
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(new File("E:/workdir_study/tmp/test.txt"));
+			while (scanner.hasNext()) {
+				System.out.println(scanner.next());
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+
 }

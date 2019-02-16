@@ -1,3 +1,5 @@
+package corejava8.v1ch07.DrawTest;
+
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;

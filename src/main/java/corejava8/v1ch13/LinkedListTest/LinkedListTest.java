@@ -1,3 +1,5 @@
+package corejava8.v1ch13.LinkedListTest;
+
 import java.util.*;
 
 /**
@@ -9,49 +11,47 @@ public class LinkedListTest
 {
    public static void main(String[] args)
    {
-      List<String> a = new LinkedList<String>();
-      a.add("Amy");
-      a.add("Carl");
-      a.add("Erica");
+		List<String> a = new LinkedList<String>();
+		a.add("Amy");
+		a.add("Carl");
+		a.add("Erica");
 
-      List<String> b = new LinkedList<String>();
-      b.add("Bob");
-      b.add("Doug");
-      b.add("Frances");
-      b.add("Gloria");
+		List<String> b = new LinkedList<String>();
+		b.add("Bob");
+		b.add("Doug");
+		b.add("Frances");
+		b.add("Gloria");
 
-      // merge the words from b into a
+		// merge the words from b into a
 
-      ListIterator<String> aIter = a.listIterator();
-      Iterator<String> bIter = b.iterator();
+		ListIterator<String> aIter = a.listIterator();
+		Iterator<String> bIter = b.iterator();
 
-      while (bIter.hasNext())
-      {
-         if (aIter.hasNext()) aIter.next();
-         aIter.add(bIter.next());
-      }
+		while (bIter.hasNext()) {
+			if (aIter.hasNext())
+				aIter.next();
+			aIter.add(bIter.next());
+		}
 
-      System.out.println(a);
+		System.out.println(a);
 
-      // remove every second word from b
+		// remove every second word from b
 
-      bIter = b.iterator();
-      while (bIter.hasNext())
-      {
-         bIter.next(); // skip one element
-         if (bIter.hasNext())
-         {
-            bIter.next(); // skip next element
-            bIter.remove(); // remove that element
-         }
-      }
+		bIter = b.iterator();
+		while (bIter.hasNext()) {
+			bIter.next(); // skip one element
+			if (bIter.hasNext()) {
+				bIter.next(); // skip next element
+				bIter.remove(); // remove that element
+			}
+		}
 
-      System.out.println(b);
+		System.out.println(b);
 
-      // bulk operation: remove all words in b from a
+		// bulk operation: remove all words in b from a
 
-      a.removeAll(b);
+		a.removeAll(b);
 
-      System.out.println(a);
+		System.out.println(a);
    }
 }

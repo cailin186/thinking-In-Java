@@ -1,4 +1,4 @@
-package corejava8.v1ch13.MapTest;
+package corejava8.v1ch13.CollectionTest;
 
 import java.util.*;
 import java.util.Map.Entry;
