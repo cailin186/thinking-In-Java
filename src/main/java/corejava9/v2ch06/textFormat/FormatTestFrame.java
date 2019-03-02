@@ -5,6 +5,7 @@ import java.awt.event.*;
 import java.net.*;
 import java.text.*;
 import java.util.*;
+import java.util.concurrent.RejectedExecutionHandler;
 import javax.swing.*;
 import javax.swing.text.*;
 
@@ -13,7 +14,7 @@ import javax.swing.text.*;
  */
 public class FormatTestFrame extends JFrame
 {
-   private DocumentFilter filter = new IntFilter();
+   private DocumentFilter filter = new textFormat.IntFilter();
    private JButton okButton;
    private JPanel mainPanel;
 
@@ -102,10 +103,12 @@ public class FormatTestFrame extends JFrame
          ex.printStackTrace();
       }
 
-      JFormattedTextField ipField = new JFormattedTextField(new IPAddressFormatter());
+      JFormattedTextField ipField = new JFormattedTextField(new textFormat.IPAddressFormatter());
       ipField.setValue(new byte[] { (byte) 130, 65, 86, 66 });
       addRow("IP Address:", ipField);
       pack();
+
+      RejectedExecutionHandler
    }
 
    /**

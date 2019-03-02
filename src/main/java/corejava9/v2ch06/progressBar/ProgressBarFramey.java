@@ -9,7 +9,7 @@ import javax.swing.*;
  * A frame that contains a button to launch a simulated activity, a progress bar, and a text area
  * for the activity output.
  */
-public class ProgressBarFrame extends JFrame
+public class ProgressBarFramey extends JFrame
 {
    public static final int TEXT_ROWS = 10;
    public static final int TEXT_COLUMNS = 40;
@@ -20,7 +20,7 @@ public class ProgressBarFrame extends JFrame
    private JTextArea textArea;
    private SimulatedActivity activity;
 
-   public ProgressBarFrame()
+   public ProgressBarFramey()
    {
       // this text area holds the activity output
       textArea = new JTextArea(TEXT_ROWS, TEXT_COLUMNS);
